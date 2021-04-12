@@ -119,6 +119,12 @@ if __name__ == '__main__':
                                      'Data_EuclidBig.0', 'Public', 'Band1', 'imageEUC_VIS-100003.fits')
     image = load_fits_image(sample_image_path)
 
+    # display the input image
+    plt.imshow(image, cmap='gray')
+    plt.axis('off')
+    plt.suptitle('input image: ' + sample_image_path.split(os.sep)[-1], size=16)
+    plt.show()
+
     # visualize_features(model, image)
 
     visualize_features_all_conv(model, image)
